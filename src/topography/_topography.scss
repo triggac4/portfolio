@@ -1,0 +1,63 @@
+%heading{
+    font-family: $font-heading;
+}
+
+.heading__1{
+    @extend %heading;
+    text-transform: capitalize;
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+.heading__2{
+    @extend %heading;
+    font-size: 2.2rem;
+    line-height: 1;
+    text-transform: capitalize; 
+    font-weight: 700;
+}
+.heading__3{   
+    @extend %heading;
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+}
+
+.heading__4{   
+    @extend %heading;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    line-height: 1;
+
+    &--resume{
+        font-size: 1.4rem;
+        color: $color-primary;
+        background-color: $color-secondary-light-1;
+        display: inline-block;
+        padding: 5px;
+    }
+ 
+}
+
+
+///////////////////////////////
+//////////////section__heading
+
+.section__heading{
+    //because of the grid
+    justify-self: start;
+   
+    color: $color-primary;
+    display: inline-block;
+
+    &::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 50%;
+        background-color: $color-secondary;
+        transform: translateY(300%);
+        z-index: 10;
+        
+    }
+}
