@@ -1,12 +1,18 @@
+import {Link} from "react-router-dom";
+  
 const portfolioContainer=props=>{
     let isWeb=props.className==="portfolio__web";
     let portfolioExtra=isWeb?
         (<div className="portfolio__extra">
-            <a href="#portfolio" className="portfolio__extra--1">more</a>
+            <Link to="/portfolio-detail">
+                <a href="#portfolio" className="portfolio__extra--1">more</a>
+            </Link>
             <a href="#port" className="portfolio__extra--2">link</a>
         </div>):
         (<div className="portfolio__extra">
-            <a href="#portfolio" className="portfolio__extra--1" style={{width:"100%"}}>more</a>
+           <Link to="/portfolio-detail">
+                <a href="#portfolio" className="portfolio__extra--1" style={{width:"100%"}}>more</a>
+           </Link> 
         </div>);
 
     let style={display:"block"};
