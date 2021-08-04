@@ -1,11 +1,11 @@
 import ResumeBody from "../component/resume-body";
 
-const resume=props=>{
+const Resume=props=>{
     let render=props.background?(<section className="resume resume--background"></section>):(
         <section id="resume" className="resume">
             <h2 className="heading__2 section__heading margin-bottom-small">resume</h2>
             
-            <div className="resume__grid">
+            <div data-aos={"fade-left"} className="resume__grid">
                 <ResumeBody heading="summary">
                     <h4 className="heading__4 margin-bottom-small">Offokansi Kenechukwu</h4>
                     <p>
@@ -51,4 +51,4 @@ const resume=props=>{
 
     return render;
 }
-export default resume;
+export default Resume;

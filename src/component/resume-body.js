@@ -1,5 +1,5 @@
 const resumeBody=props=>{
-    let heading=props.heading==null?{"row-gap":0}:{};
+    let heading=props.heading==null?{"rowGap":0}:{};
     return (
         <div className="resume__body" style={heading}>
                 <h3 className="heading__3 resume__body--heading">{props.heading}</h3>

@@ -47,6 +47,12 @@ $color-secondary-light-1:#e8f0f2;
 $font-heading: 'Red Hat Display', sans-serif;
 $font-regular: 'Ubuntu Condensed', sans-serif;
 
+
+//media-queries
+$bp-largest:78.125em;
+$bp-large:68.75em;
+$bp-medium:56.25em;
+$bp-small:25em;
 *,
 *::after,
 *::before,
@@ -58,32 +64,57 @@ $font-regular: 'Ubuntu Condensed', sans-serif;
     margin: 0;
     box-sizing: inherit;
     scroll-behavior: smooth;
+    
 }
 
 
-.html{
+html{
+    position: relative;
     font-size: 62.5%; //10/16 *100%
     box-sizing: border-box;
+    @media (min-width:$bp-largest) {
+      font-size:56.25%;
+    }
+    @media (max-width:$bp-small) {
+      font-size: 37.5%;
+  }
 }
 
 
 body{
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     font-family: $font-regular;
     line-height: 1.2;
-    
-}
+    max-width:1440px;
+    margin: 0 auto;   
+    background-color: rgb(186, 181, 181);
+  }
 
 .grid-container{
   flex: 8;
   display: grid;
   grid-template-columns: [full-start] minmax(5rem,1fr) [content-start] repeat(8, [col-start] minmax(min-content,10rem) [col-end]) [content-end] minmax(5rem,1fr) [full-end];
-  grid-template-rows:100vh;
+  grid-template-rows:100vh repeat(8,min-content);
   position: relative;
   background-image:linear-gradient( rgba($color-secondary,0.7), rgba($color-secondary,0.7)), url("./img/background-pic.jpg");
   background-size:cover;
   background-position-x: center;
   height: 100vh;
-  overflow-y:scroll;
+  margin-left:30rem;
+  @media (max-width:$bp-large){
+    margin-left: 0;
+  }
+  
+  @media (max-width:$bp-small) {
+    grid-template-columns: [full-start] minmax(2rem,1fr) [content-start] repeat(8, [col-start] minmax(min-content,10rem) [col-end]) [content-end] minmax(2rem,1fr) [full-end];
+    
+  }
+}
+.portfolio-page{
+  flex: 8;
+  margin-left:30rem;
 
+  @media (max-width:$bp-large){
+    margin-left: 0;
+  }
 }

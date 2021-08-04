@@ -1,17 +1,29 @@
 import {Link} from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import {imageUrl,writeUp} from "../redux/action/index";
   
-const portfolioContainer=props=>{
+const PortfolioContainer=props=>{
+
+    let dispatchImage=useDispatch();
+    let dispatchWrite=useDispatch();
+    const dispatchFunction=()=>{
+        dispatchImage(imageUrl(props.imageUrl));
+        dispatchWrite(writeUp(props.writeUp));
+    }
+
+    
     let isWeb=props.className==="portfolio__web";
     let portfolioExtra=isWeb?
-        (<div className="portfolio__extra">
-            <Link to="/portfolio-detail">
-                <a href="#portfolio" className="portfolio__extra--1">more</a>
+        (<div className="portfolio__extra" style={{"height":"20%"}}>
+            <Link to="/portfolio-detail" className="portfolio__extra--1" onClick={dispatchFunction}>
+                more
             </Link>
-            <a href="#port" className="portfolio__extra--2">link</a>
+            <a href={props.writeUp.link} className="portfolio__extra--2" target="_blank" rel="noreferrer">link</a>
         </div>):
         (<div className="portfolio__extra">
-           <Link to="/portfolio-detail">
-                <a href="#portfolio" className="portfolio__extra--1" style={{width:"100%"}}>more</a>
+           <Link to="/portfolio-detail" className="portfolio__extra--1" style={{width:"100%"}} onClick={dispatchFunction}>
+               more
            </Link> 
         </div>);
 
@@ -38,10 +50,10 @@ const portfolioContainer=props=>{
 
     return (
         <figure className={props.className} style={style}>
-            <img className="portfolio__img" src={props.src} alt={props.alt}/>
+            <img className="portfolio__img"  src={props.src} alt={props.alt}/>
             {portfolioExtra}
        </figure>
     );
 }
 
-export default portfolioContainer;
+export default PortfolioContainer;

@@ -5,12 +5,16 @@
 .heading__1{
     @extend %heading;
     text-transform: capitalize;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 500;
+
+    @media (max-width:$bp-small) {
+        font-size: 4rem;
+    }
 }
 .heading__2{
     @extend %heading;
-    font-size: 2.2rem;
+    font-size: 3rem;
     line-height: 1;
     text-transform: capitalize; 
     font-weight: 700;
@@ -18,19 +22,19 @@
 .heading__3{   
     @extend %heading;
     font-weight: 500;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
 }
 
 .heading__4{   
     @extend %heading;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     text-transform: capitalize;
     line-height: 1;
 
     &--resume{
-        font-size: 1.4rem;
+        font-size: 2.2rem;
         color: $color-primary;
         background-color: $color-secondary-light-1;
         display: inline-block;
@@ -58,6 +62,6 @@
         background-color: $color-secondary;
         transform: translateY(300%);
         z-index: 10;
-        
+        margin-bottom: 1rem;
     }
 }

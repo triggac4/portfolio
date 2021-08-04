@@ -7,7 +7,7 @@ const skill=props=>{
     ):(
         <section id="skill" className="skill skill--content">
             <h2 className="section__heading heading__2 ">skills</h2>
-            <div className="skill__skillBar">
+            <div data-aos={"fade-left"} className="skill__skillBar">
                 <SkillBar name="html" percentage={80}/>
                 <SkillBar name="css" percentage={95}/>
                 <SkillBar name="javascript" percentage={65}/>
