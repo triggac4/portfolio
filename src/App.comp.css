@@ -305,8 +305,8 @@ body {
 
 .sidebar-opener__button {
   position: fixed;
-  top: 5rem;
-  right: 4rem;
+  top: 3.5rem;
+  right: 3rem;
   z-index: 120;
   height: 5rem;
   width: 5rem;

@@ -29,6 +29,9 @@ function App() {
       delay:0
     });
     },[]);
+    const closeSidebar=()=>{
+      setstate(!state);
+    }
   let imageUrl=useSelector(state=>state.imageUrl);
   let button=state?"button--open":"";
   return (
@@ -36,11 +39,11 @@ function App() {
       <div className="body">
           <div className="sidebar-opener">
             <div style={{"display":state?"":"none"}} className="sidebar-opener__background" onClick={()=>setstate(!state)}></div>
-            <div className="sidebar-opener__button" onClick={()=>setstate(!state)}>
+            <div className="sidebar-opener__button" onClick={closeSidebar}>
               <div className={button+" button"}></div>
             </div>
           </div>
-          <Sidebar show={state}/>
+          <Sidebar close={closeSidebar} show={state}/>
           <Switch>
             <Route exact path="/portfolio">
               <main className="grid-container">

@@ -12,7 +12,7 @@ const sidebar=props=>{
                     <SocialMedia/>
                 </div>
                 <div className="sidebar__navigation">
-                    <NavigationItem/>
+                    <NavigationItem close={props.close}/>
                 </div>
                 
             </div>
