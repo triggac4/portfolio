@@ -23,14 +23,14 @@
     "compile:css": "node-sass src/main.scss src/App.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/App.comp.css -o src/App.prefix.css",
     "compress:css": "node-sass src/App.prefix.css src/App.css --output-style compressed",
-    "react-build":"react-scripts build",
+    "react-build": "react-scripts build",
     "build": "npm-run-all compile:css prefix:css compress:css react-build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://triggac4.github.io/portfolio/",
+  "homepage": "https://triggac4.github.io/portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",

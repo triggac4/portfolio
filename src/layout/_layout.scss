@@ -66,8 +66,8 @@
     }
     &__button{
         position:fixed;
-        top: 5rem;
-        right:4rem;
+        top: 3.5rem;
+        right:3rem;
         z-index: 120;
         height: 5rem;
         width: 5rem;
@@ -75,6 +75,7 @@
         @media (max-width:$bp-large) {      
             display:block;    
         }
+
         .button{
             width: 4rem;
             height: 3px;
@@ -282,14 +283,19 @@
 
     &__grid{
         display: grid;
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+
         grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
         grid-template-rows:min-content;
         grid-auto-rows: 15rem;
+        @media (max-width:$bp-medium) {
+            row-gap: 5rem;
+        }
 
         @media (max-width:$bp-small) {
-        grid-template-columns: 1fr;    
-        grid-auto-rows: 30rem;
+            grid-template-columns: 1fr;    
+            grid-auto-rows: 30rem;
         }
     }
 
@@ -429,7 +435,7 @@
     flex: 8;
     display: grid;
     grid-template-columns: [full-start] minmax(5rem,1fr) [content-start] repeat(8, [col-start] minmax(min-content,10rem) [col-end]) [content-end] minmax(5rem,1fr) [full-end];
-    grid-template-rows:100vh;
+    grid-template-rows:75vh;
     position: relative;
     background-image:linear-gradient( rgba($color-secondary,0.7), rgba($color-secondary,0.7)), url("./img/background-pic.jpg");
     background-size:cover;
@@ -441,12 +447,10 @@
     position: relative;
     overflow:hidden;
     grid-column: full-start/full-end;
-    height: 100vh;
+    height: 75vh;
     &__photo{
         height: 100%;
-        position: relative;
-        
-       
+        position: relative;      
         //background-color: transparent;
         
         &-left{

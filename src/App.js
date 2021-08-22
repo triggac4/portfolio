@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router,
+import {BrowserRouter,
   Switch,
   Route,
 } from "react-router-dom";
@@ -32,7 +32,7 @@ function App() {
   let imageUrl=useSelector(state=>state.imageUrl);
   let button=state?"button--open":"";
   return (
-    <Router>
+    <BrowserRouter>
       <div className="body">
           <div className="sidebar-opener">
             <div style={{"display":state?"":"none"}} className="sidebar-opener__background" onClick={()=>setstate(!state)}></div>
@@ -42,7 +42,7 @@ function App() {
           </div>
           <Sidebar show={state}/>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/portfolio">
               <main className="grid-container">
                   <Head/>
                   <About background/>
@@ -68,7 +68,7 @@ function App() {
             </Route>
           </Switch>
       </div>
-    </Router>  
+    </BrowserRouter>  
   );
   
 }
