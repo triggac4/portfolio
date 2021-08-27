@@ -2,7 +2,7 @@
 
 const Form=props=>{
     return(
-        <form data-aos={"fade-left"} action="mailto:koffokansi@gmail.com?subject=contact_form_from_portfolio" className="form" method="post" name="contactForm" encType="multipart/form-data”">
+        <form data-aos={"fade-left"} action="mailto:koffokansi@gmail.com?subject=contact_form_from_portfolio" className="form" method="post" name="contactForm" enctype="text/plain">
             <div className="form__element">
                 <label htmlFor="name">
                     Your name:
