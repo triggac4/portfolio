@@ -108,6 +108,7 @@ class PhotoGallery extends Component{
                 <button className="photo-gallery__btn-back" onClick={this.moveBack}>&#62;</button>
                 <div className="photo-gallery__indicator">
                     {galleryIndicator}
+                    
                 </div>     
             </div>
         );
