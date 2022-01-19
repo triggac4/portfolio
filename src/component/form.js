@@ -109,7 +109,6 @@ const Form = (props) => {
             </div>
 
             <input
-                data-aos={"fade-left"}
                 type="button"
                 className="form__element form__span form__button"
                 value={isLoading ? "SENDING..." : "submit message"}
