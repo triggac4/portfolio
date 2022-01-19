@@ -53,12 +53,11 @@ const Form = (props) => {
     }
     return (
         <form
-            data-aos={"fade-left"}
             action="http://localhost:3000/api/v1/contact"
             className="form"
             method="post"
         >
-            <div className="form__element">
+            <div data-aos={"fade-left"} className="form__element">
                 <label htmlFor="name">Your name:</label>
                 <input
                     id="name"
@@ -70,7 +69,7 @@ const Form = (props) => {
                     onChange={onChange}
                 />
             </div>
-            <div className="form__element">
+            <div data-aos={"fade-left"} className="form__element">
                 <label htmlFor="email">Your email:</label>
                 <input
                     id="email"
@@ -82,7 +81,7 @@ const Form = (props) => {
                     onChange={onChange}
                 />
             </div>
-            <div className="form__element form__span">
+            <div data-aos={"fade-left"} className="form__element form__span">
                 <label htmlFor="title">title:</label>
                 <input
                     id="title"
@@ -95,7 +94,7 @@ const Form = (props) => {
                 />
             </div>
 
-            <div className="form__element form__span">
+            <div data-aos={"fade-left"} className="form__element form__span">
                 <label htmlFor="body">message:</label>
                 <textarea
                     id="body"
@@ -110,6 +109,7 @@ const Form = (props) => {
             </div>
 
             <input
+                data-aos={"fade-left"}
                 type="button"
                 className="form__element form__span form__button"
                 value={isLoading ? "SENDING..." : "submit message"}

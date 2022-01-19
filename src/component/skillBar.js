@@ -1,8 +1,8 @@
-const skillBar=props=>{
-    let percentString=props.percentage+"%";
-    let style={"width": props.percentage+"%"};
+const skillBar = (props) => {
+    let percentString = props.percentage + "%";
+    let style = { width: props.percentage + "%" };
     return (
-        <div className="skillBar">
+        <div data-aos={"fade-left"} className="skillBar">
             <div className="skillBar__info">
                 <div className="skillBar__name">{props.name}</div>
                 <div className="skillBar__percentage">{percentString}</div>
@@ -12,6 +12,6 @@ const skillBar=props=>{
             </div>
         </div>
     );
-}
+};
 
 export default skillBar;
