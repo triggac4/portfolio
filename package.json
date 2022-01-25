@@ -30,7 +30,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
-    "homepage": "https://triggac4.github.io",
+    "homepage": "https://www.koffokansi.tech",
     "eslintConfig": {
         "extends": [
             "react-app",
