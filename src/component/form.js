@@ -1,13 +1,12 @@
-import { useState, useRef } from "react";
+import { useState} from "react";
 
-const Form = (props) => {
+const Form = () => {
   const [formValue, setFormValue] = useState({
     name: "",
     email: "",
     subject: "",
     body: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
   let onChange = (event) => {
     setFormValue({ ...formValue, [event.target.name]: event.target.value });
     console.log(formValue);
@@ -76,7 +75,7 @@ const Form = (props) => {
       <input
         type="submit"
         className="form__element form__span form__button"
-        value={isLoading ? "SENDING..." : "submit message"}
+        value={"submit message"}
       />
     </form>
   );
