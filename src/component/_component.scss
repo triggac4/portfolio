@@ -183,6 +183,9 @@
     padding: 5rem;
     background-color: $color-secondary-light-2;
     box-shadow:2rem 2rem 3rem rgba(0,0,0,0.15);
+    @media (prefers-color-scheme: dark) {
+        background-color: $color-primary;
+    }
 
     //grid
     display: grid;
@@ -247,6 +250,9 @@
         display: block;
         border: none;
         background-color: $color-primary;
+        @media (prefers-color-scheme: dark) {
+            background-color: $color-dark-background;
+        }
         color: #fff;
         padding: 1rem;
         font-size: 1.7rem;

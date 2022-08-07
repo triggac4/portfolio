@@ -38,80 +38,103 @@
 } */
 //color-palets
 $color-primary: #053742;
-
-$color-secondary:#39a2db;
-$color-secondary-light-2:#a2dbfa;
-$color-secondary-light-1:#e8f0f2;
-
+$color-dark-background: #01181d;
+$color-secondary: #39a2db;
+$color-secondary-light-2: #a2dbfa;
+$color-secondary-light-1: #e8f0f2;
+$color-white: #fff;
+$color-black: #000;
 //fonts
-$font-heading: 'Red Hat Display', sans-serif;
-$font-regular: 'Ubuntu Condensed', sans-serif;
-
+$font-heading: "Red Hat Display", sans-serif;
+$font-regular: "Ubuntu Condensed", sans-serif;
 
 //media-queries
-$bp-largest:78.125em;
-$bp-large:68.75em;
-$bp-medium:56.25em;
-$bp-small:25em;
+$bp-largest: 78.125em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 25em;
 *,
 *::after,
 *::before,
 *:link,
-*:visited
-{
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
-    scroll-behavior: smooth;
-    
+*:visited {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
-
-html{
-    position: relative;
-    font-size: 62.5%; //10/16 *100%
-    box-sizing: border-box;
-    @media (min-width:$bp-largest) {
-      font-size:56.25%;
-    }
-}
-
-
-body{
-    font-size: 1.9rem;
-    font-family: $font-regular;
-    line-height: 1.2;
-    max-width:1440px;
-    margin: 0 auto;   
-    background-color: $color-primary;
+html {
+  position: relative;
+  font-size: 62.5%; //10/16 *100%
+  box-sizing: border-box;
+  @media (min-width: $bp-largest) {
+    font-size: 56.25%;
   }
+}
 
-.grid-container{
+body {
+  font-size: 1.9rem;
+  font-family: $font-regular;
+  line-height: 1.2;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $color-secondary;
+  @media (prefers-color-scheme: dark) {
+    color: $color-white;
+    background-color:  #012932;
+
+  }
+}
+
+.grid-container {
   flex: 8;
   display: grid;
-  grid-template-columns: [full-start] minmax(5rem,1fr) [content-start] repeat(8, [col-start] minmax(min-content,10rem) [col-end]) [content-end] minmax(5rem,1fr) [full-end];
-  grid-template-rows:100vh repeat(8,min-content);
+  grid-template-columns:
+    [full-start] minmax(5rem, 1fr) [content-start] repeat(
+      8,
+      [col-start] minmax(min-content, 10rem) [col-end]
+    )
+    [content-end] minmax(5rem, 1fr) [full-end];
+  grid-template-rows: 100vh repeat(8, min-content);
   position: relative;
-  background-image:linear-gradient( rgba($color-secondary,0.7), rgba($color-secondary,0.7)), url("./img/background-pic.jpg");
-  background-size:cover;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.7),
+      rgba($color-secondary, 0.7)
+    ),
+    url("./img/background-pic.jpg");
+  @media (prefers-color-scheme: dark) {
+    background-image: linear-gradient(
+        rgba($color-dark-background, 0.7),
+        rgba($color-dark-background, 0.7)
+      ),
+      url("./img/background-pic.jpg");
+  }
+  background-size: cover;
   background-position-x: center;
   height: 100vh;
-  margin-left:30rem;
-  @media (max-width:$bp-large){
-    margin-left: 0;
-  }
-  
-  @media (max-width:$bp-small) {
-    grid-template-columns: [full-start] minmax(2rem,1fr) [content-start] repeat(8, [col-start] minmax(min-content,10rem) [col-end]) [content-end] minmax(2rem,1fr) [full-end];
-    
-  }
-}
-.portfolio-page{
-  flex: 8;
-  margin-left:30rem;
+  margin-left: 30rem;
 
-  @media (max-width:$bp-large){
+  @media (max-width: $bp-large) {
     margin-left: 0;
+  }
+
+  @media (max-width: $bp-small) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [content-start] repeat(
+        8,
+        [col-start] minmax(min-content, 10rem) [col-end]
+      )
+      [content-end] minmax(2rem, 1fr) [full-end];
+  }
+
+  .portfolio-page {
+    flex: 8;
+    margin-left: 30rem;
+
+    @media (max-width: $bp-large) {
+      margin-left: 0;
+    }
   }
 }
