@@ -7,6 +7,7 @@
 ///////////sidebar
 .sidebar {
   box-sizing: border-box;
+  border-right: $color-dark-background 5px solid;
   padding: 1rem;
   padding-top: 5rem;
   display: grid;
