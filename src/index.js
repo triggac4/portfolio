@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import allReducers from './redux/reducer';
+import allReducers from './redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 import { PersistGate } from 'redux-persist/integration/react';

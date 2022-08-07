@@ -177,6 +177,28 @@ class portfolio extends React.Component {
             className="portfolio__mobile"
             imageUrl={[chatApp]}
           ></PortfolioContainer>
+            <PortfolioContainer
+            writeUp={{
+              heading: "ThriveAgric website",
+              writeUp:
+                "built with next js and uses strapi cms it's backend" +
+                " very dynamic all routes and pages set from strapi every section is a component on it's own",
+                link: "https://www.thriveagric.com/",
+            }}
+            display={this.state}
+            src={thrivewebsite}
+            alt="calender project"
+            className="portfolio__web"
+            imageUrl={[
+              thrivewebsite,
+              thrivewebsite2,
+              thrivewebsite3,
+              thrivewebsite4,
+              thrivewebsite5,
+              thrivewebsite6,
+              thrivewebsite7,
+            ]}
+          ></PortfolioContainer>
           <PortfolioContainer
             writeUP={{
               heading: "locator project",
@@ -200,27 +222,6 @@ class portfolio extends React.Component {
             alt="tracker project"
             className="portfolio__mobile"
             imageUrl={[tracker, tracker2, tracker3]}
-          ></PortfolioContainer>
-          <PortfolioContainer
-            writeUp={{
-              heading: "ThriveAgric website",
-              writeUp:
-                "built with next js and uses strapi cms it's backend" +
-                "very dynamic all routes and pages set from strapi every section is a component on it's own",
-            }}
-            display={this.state}
-            src={thrivewebsite}
-            alt="calender project"
-            className="portfolio__web"
-            imageUrl={[
-              thrivewebsite,
-              thrivewebsite2,
-              thrivewebsite3,
-              thrivewebsite4,
-              thrivewebsite5,
-              thrivewebsite6,
-              thrivewebsite7,
-            ]}
           ></PortfolioContainer>
         </div>
       </section>

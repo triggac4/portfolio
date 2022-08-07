@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import imageUrl from "./imageUrl";
-import writeUp from "./writeUp";
+import imageUrl from "./reducer/imageUrl";
+import writeUp from "./reducer/writeUp";
 
 let allReducers= combineReducers({ writeUp,imageUrl});
 
